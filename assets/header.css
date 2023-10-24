@@ -1,0 +1,100 @@
+:root {
+    --lavender: #dcdcff;
+    --periwinkle: #cdcdff;
+    --purple: #8686fe;
+    --black-olive: #43433e;
+    --light-gray: #d3d3d3;
+    --sea-salt: #f9fafd;
+}
+
+* {
+    font-family: Arial;
+}
+
+.header-wrapper {
+    background-color: orange;
+    padding: 15px 40px;
+    box-shadow: 0 5px 10px var(--light-gray);
+}
+
+.shipping-info {
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: var(--black-olive);
+    text-align: center;
+}
+
+.mid-header {
+    display: grid;
+    grid-template-columns: 20% 60% 10% 10%;
+    align-items: center;
+    border: 1px dotted blue;
+}
+
+/* to visualize the columns */
+.mid-header div {
+    border: 1px dotted red;
+}
+
+.logo {
+    float: left;
+
+    width: 75px;
+    height: 75px;
+
+    background-color: var(--periwinkle);
+    border-radius: 50%;
+}
+
+.search-bar input {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: var(--sea-salt);
+    border: none;
+
+    width: 100%;
+}
+
+.account {
+    width: 30px;
+    height: 40px;
+    background-color: var(--black-olive);
+    margin: auto;
+}
+
+.cart {
+    width: 30px;
+    height: 40px;
+    background-color: var(--black-olive);
+    margin: auto;
+}
+
+.nav-bar {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    width: 75%;
+    margin: auto;
+
+    padding: 0 10px;
+
+    border: 1px solid red;
+}
+
+.nav-bar a {
+    color: var(--black-olive);
+    text-decoration: none;
+    border: 1px solid green;
+    text-align: center;
+    transition: 0.2s border-bottom;
+}
+
+.nav-bar a:hover {
+    border-bottom: 5px solid purple;
+}
+
+@media screen and (max-width: 850px) {
+    .header-wrapper {
+        background-color: pink;
+    }
+}

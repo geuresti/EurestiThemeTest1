@@ -1,8 +1,7 @@
 {
-    "layout": "theme.liquid",
     "sections": {
         "main": {
-            "type": "home",
+            "type": "product-test",
             "settings": {}
         }
     },

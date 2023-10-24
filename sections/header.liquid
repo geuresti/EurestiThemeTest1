@@ -1,0 +1,46 @@
+<!-- 
+Notes:
+- When page is shrunk, the nav bar becomes a side nav bar
+- How to give a template a unique css sheet?
+-->
+
+{{ 'header.css' | asset_url | stylesheet_tag }}
+
+
+<p> MY HEADER TESTING PLACEHOLDER BLAH BLAHH </p>
+
+<div class="header-wrapper">
+    <div class="shipping-info">
+        <p>Free standard shipping for orders over $40</p>
+    </div>
+    <div class="mid-header">
+        <div>
+            <div class="logo"></div>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+        <div>
+            <div class="account"></div>
+        </div>
+        <div>
+            <div class="cart"></div>
+        </div>
+    </div>
+    <div class="nav-bar">
+        <a href="">New Arrivals</a>
+        <a href="">Vitamins</a>
+        <a href="">LashCare</a>
+        <a href="">Gift Packs</a>
+        <a href="">Buy More & Save</a>
+        <a href="">Accessories</a>
+        <a href="">Shop All (dropdown)</a>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Header",
+        "settings": []
+    }
+{% endschema %}
