@@ -7,12 +7,6 @@
                         <h2>{{ block.settings.heading }}</h2>
                         {{ block.settings.text }}
 
-                        <!--
-                        <form>
-                            <input type="email" placeholder="Email address">
-                            <button type="submit">Subscribe</button>
-                        </form>
-                        -->
                         {% form 'customer', id: 'footer-newsletter' %}
                             {% if form.posted_successfully? %}
                                 <p style="font-weight: bold; margin-bottom: 10px;">You successfully subscribed!</p>

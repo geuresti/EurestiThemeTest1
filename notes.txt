@@ -1,0 +1,26 @@
+TO DO:
+- home page
+    - sections
+        product section:
+            - product block (image, review, price)
+            - image block
+        image section:
+            - one big image, two small (*)
+        link section:
+            - link block (image, title, link)
+            - image block (icon, link)
+- collections page (need to make collections from products)
+- product page 
+- cart
+
+EDIT:
+    - Footer
+        - change color palette
+        - change content
+    - Header
+        - finish dropdown
+        - add relevant links
+        - add functionality to search bar
+
+NOTES:
+- ignore account related stuff

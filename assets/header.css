@@ -1,3 +1,10 @@
+/* TO DO:
+- when page is shrunk, it should become a side menu
+- add icons
+- change colors
+- add images to dropdown
+*/
+
 :root {
     --lavender: #dcdcff;
     --periwinkle: #cdcdff;
@@ -12,9 +19,14 @@
 }
 
 .header-wrapper {
-    background-color: orange;
-    padding: 15px 40px;
+    background-color: var(--sea-salt);
+    padding: 15px 40px 2px 40px;
     box-shadow: 0 5px 10px var(--light-gray);
+
+    width: 100%;
+    /*position: sticky;*/
+    position: fixed;
+    top: 0;
 }
 
 .shipping-info {
@@ -29,12 +41,12 @@
     display: grid;
     grid-template-columns: 20% 60% 10% 10%;
     align-items: center;
-    border: 1px dotted blue;
+    /*border: 1px dotted blue;*/
 }
 
 /* to visualize the columns */
 .mid-header div {
-    border: 1px dotted red;
+    /*border: 1px dotted red;*/
 }
 
 .logo {
@@ -50,7 +62,7 @@
 .search-bar input {
     padding: 5px;
     border-radius: 10px;
-    background-color: var(--sea-salt);
+    background-color: var(--lavender);
     border: none;
 
     width: 100%;
@@ -75,24 +87,47 @@
     grid-template-columns: repeat(7, auto);
     width: 75%;
     margin: auto;
-
+    column-gap: 5px;
     padding: 0 10px;
 
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 .nav-bar a {
     color: var(--black-olive);
     text-decoration: none;
-    border: 1px solid green;
+    box-sizing: content-box;
+    /*border: 1px solid green;*/
+    padding-bottom: 3px;
     text-align: center;
-    transition: 0.2s border-bottom;
+    transition: 0.1s border-bottom, 0.1s padding-bottom;
 }
 
 .nav-bar a:hover {
-    border-bottom: 5px solid purple;
+    border-bottom: 3px solid var(--purple);
+    padding-bottom: 0px;
 }
 
+/* Dropdown menu */
+.dropdown-content {
+    display: none;
+    background-color: var(--black-olive);
+    position: absolute;
+    top: 140px;
+    left: 350px;
+    color: white;
+    width: 400px;
+    height: 200px;
+  }
+
+  /* NOTE: if you take mouse off "Shop All" the 
+    dropdown content disappears.
+  */
+.dropdown-content a:hover {background-color: #919090;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Smaller screens */
 @media screen and (max-width: 850px) {
     .header-wrapper {
         background-color: pink;

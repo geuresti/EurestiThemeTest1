@@ -1,13 +1,4 @@
-<!-- 
-Notes:
-- When page is shrunk, the nav bar becomes a side nav bar
-- How to give a template a unique css sheet?
--->
-
 {{ 'header.css' | asset_url | stylesheet_tag }}
-
-
-<p> MY HEADER TESTING PLACEHOLDER BLAH BLAHH </p>
 
 <div class="header-wrapper">
     <div class="shipping-info">
@@ -34,7 +25,11 @@ Notes:
         <a href="">Gift Packs</a>
         <a href="">Buy More & Save</a>
         <a href="">Accessories</a>
-        <a href="">Shop All (dropdown)</a>
+        <a class="dropdown"> Shop All
+            <div class="dropdown-content">
+                <img src="" alt="picture"/>
+            </div>
+        </a>
     </div>
 </div>
 
