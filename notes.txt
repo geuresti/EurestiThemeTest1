@@ -9,6 +9,10 @@ TO DO:
         link section:
             - link block (image, title, link)
             - image block (icon, link)
+    - pop up (js?)
+    - reviews
+        - sortable
+
 - collections page (need to make collections from products)
 - product page 
 - cart

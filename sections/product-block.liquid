@@ -1,0 +1,70 @@
+<!-- TO DO:
+- how to make images insertable via theme editor?
+- css
+-->
+
+{{ 'product-block.css' | asset_url | stylesheet_tag }}
+
+<div class="product-block-wrapepr">
+    <h2> {{ section.settings.title }} </h2>
+
+    {% for block in section.blocks %}
+        {% if block.type == 'product' %}
+            <h3>{{ block.settings.product-title }}</h3>
+            <h4>{{ block.settings.product-image }}</h4>
+            <p>{{ block.settings.product-price }}</p>
+        {% elsif block.type == 'placeholder' %}
+            <p>placeholder</p>
+        {% endif %}
+    {% endfor %}
+</div>
+
+
+{% schema %}
+    {
+        "name": "Product Block",
+        "max_blocks": 3,
+        "settings": [
+            {
+                "id": "title",
+                "label": "title text",
+                "type": "text"
+            }
+        ],
+        "blocks": [
+            {
+                "name": "Product",
+                "type": "product",
+                "settings": [
+                    {
+                        "id": "product-image",
+                        "type": "text",
+                        "label": "image go here"
+                    },
+                    {
+                        "id": "product-title",
+                        "type": "text",
+                        "label": "product title"
+                   },
+                   {
+                        "id": "product-price",
+                        "type": "text",
+                        "label": "product price"
+                   }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Product Block",
+                "settings": {
+                    "title": "My Product Block"
+                },
+                "blocks": []
+            }
+        ],
+        "enabled_on": {
+            "templates": ["*"]
+        }
+    }
+{% endschema %}

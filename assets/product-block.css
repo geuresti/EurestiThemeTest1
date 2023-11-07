@@ -1,0 +1,13 @@
+:root {
+    --lavender: #dcdcff;
+    --periwinkle: #cdcdff;
+    --purple: #8686fe;
+    --black-olive: #43433e;
+    --light-gray: #d3d3d3;
+    --sea-salt: #f9fafd;
+}
+
+.product-block-wrapepr {
+    width: 300px;
+    height: 500px;
+}
