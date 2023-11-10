@@ -5,14 +5,21 @@
 
 {{ 'product-block.css' | asset_url | stylesheet_tag }}
 
-<div class="product-block-wrapepr">
+<div class="product-block-wrapper">
     <h2> {{ section.settings.title }} </h2>
 
     {% for block in section.blocks %}
         {% if block.type == 'product' %}
-            <h3>{{ block.settings.product-title }}</h3>
-            <h4>{{ block.settings.product-image }}</h4>
-            <p>{{ block.settings.product-price }}</p>
+            <div class="product-block">
+                <div class="product-block-grid">
+                    <!--
+                    <h4>{{ block.settings.product-image }}</h4>
+                    -->
+                    <div class="testing"></div> 
+                    <h3>{{ block.settings.product-title }}</h3>
+                    <p>{{ block.settings.product-price | money }}</p>
+                </div>
+            </div>
         {% elsif block.type == 'placeholder' %}
             <p>placeholder</p>
         {% endif %}
@@ -48,7 +55,7 @@
                    },
                    {
                         "id": "product-price",
-                        "type": "text",
+                        "type": "number",
                         "label": "product price"
                    }
                 ]

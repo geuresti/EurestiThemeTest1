@@ -2,11 +2,12 @@ TO DO:
 - home page
     - sections
         product section:
-            - product block (image, review, price)
+            - product block (title)
+                - product (image, review, price)
             - image block
         image section:
             - one big image, two small (*)
-        link section:
+        link section *:
             - link block (image, title, link)
             - image block (icon, link)
     - pop up (js?)
@@ -21,9 +22,11 @@ EDIT:
     - Footer
         - change color palette
         - change content
+        - make responsive
     - Header
         - finish dropdown
-        - add relevant links
+        - add relevant links (from navigtaion menu)
+        - make responsive
         - add functionality to search bar
 
 NOTES:

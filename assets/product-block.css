@@ -7,7 +7,53 @@
     --sea-salt: #f9fafd;
 }
 
-.product-block-wrapepr {
-    width: 300px;
-    height: 500px;
+.product-block-wrapper {
+    border: 1px solid gray;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* 
+    Product block images have to SHRINK not just
+    get thinner 
+*/
+.product-block {
+    border: 1px solid red;
+    height: 35vw;
+    max-height: 550px;
+    width: 30vw;
+    max-width: 400px;
+    display: inline-block;
+    margin: 30px 10px;
+}
+
+.product-block-grid {
+    border: 2px solid green;
+    display: grid;
+    grid-template-rows: 80% 10% 10%;
+    height: 100%;
+    align-items: center;
+}
+
+.testing {
+    width: 280px;
+    height: 350px;
+    margin: auto;
+    background-color: pink;
+}
+
+/* Smaller screens */
+@media screen and (max-width: 900px) {
+    .product-block-wrapper {
+        height: auto;
+    }
+
+    .product-block {
+        display: block;
+        height: 550px;
+        width: 400px;
+        margin: auto;
+        margin-top: 30px;
+    }
 }
