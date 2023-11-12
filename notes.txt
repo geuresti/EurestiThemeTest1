@@ -10,7 +10,6 @@ TO DO:
         link section *:
             - link block (image, title, link)
             - image block (icon, link)
-    - pop up (js?)
     - reviews
         - sortable
 
@@ -18,16 +17,25 @@ TO DO:
 - product page 
 - cart
 
-EDIT:
+TO DO:
     - Footer
         - change color palette
         - change content
         - make responsive
+        - make better nav menus (quick links, ...)
     - Header
         - finish dropdown
         - add relevant links (from navigtaion menu)
         - make responsive
         - add functionality to search bar
+        - Add logo
+    - Product block
+        - products price should auto display based on 
+            image (product) selected (Is this possible?)
+    - Add Image section
+        - 1 image var, 2 image, 3 image var?
 
 NOTES:
 - ignore account related stuff
+- LOGO color: #84a977 (build new palette around this color)
+- find FONT for the whole website

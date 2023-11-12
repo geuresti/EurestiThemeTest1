@@ -1,6 +1,6 @@
 <!-- TO DO:
-- how to make images insertable via theme editor?
 - css
+- products should be links to their product pages
 -->
 
 {{ 'product-block.css' | asset_url | stylesheet_tag }}
@@ -9,13 +9,12 @@
     <h2> {{ section.settings.title }} </h2>
 
     {% for block in section.blocks %}
-        {% if block.type == 'product' %}
+        {% if block.type == 'product' and block.settings.product-image %}
             <div class="product-block">
                 <div class="product-block-grid">
-                    <!--
-                    <h4>{{ block.settings.product-image }}</h4>
-                    -->
-                    <div class="testing"></div> 
+                    <div class="product-img-container">
+                        <img class="product-img" src="{{ block.settings.product-image | image_url }}" alt="Apparel Garden Product" />
+                    </div>
                     <h3>{{ block.settings.product-title }}</h3>
                     <p>{{ block.settings.product-price | money }}</p>
                 </div>
@@ -45,7 +44,7 @@
                 "settings": [
                     {
                         "id": "product-image",
-                        "type": "text",
+                        "type": "image_picker",
                         "label": "image go here"
                     },
                     {
