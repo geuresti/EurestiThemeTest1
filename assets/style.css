@@ -1,3 +1,12 @@
+:root {
+    --lavender: #dcdcff;
+    --periwinkle: #cdcdff;
+    --purple: #8686fe;
+    --black-olive: #43433e;
+    --light-gray: #d3d3d3;
+    --sea-salt: #f9fafd;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,122 +17,4 @@ body {
     background: #f6f6f6;
     color: #000000;
     font-family: "Arial";
-}
-
-.footer {
-    background-color: #ffffff;
-    padding: 60px 0;
-    font-size: 14px;
-}
-
-.width {
-    max-width: 1300px;
-    margin: 0 auto;
-    width: 90%;
-}
-
-.footer-top {
-    display: flex;
-    flex-direction: row;
-    gap: 60px;
-    justify-content: space-between;
-}
-
-li {
-    list-style: none;
-}
-
-@media screen and (max-width: 800px) {
-    .footer-top {
-        flex-direction: column;
-        gap: 50px;
-    }
-}
-
-.footer-column h2 {
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-
-.footer-column p, .footer-column a {
-    color: #666;
-}
-
-.footer-column li + li {
-    margin-top: 12px;
-}
-
-a {
-    text-decoration: none;
-}
-
-.footer-column a {
-    transition: 0.2s color;
-}
-
-.footer-column a:hover {
-    color: blue;
-}
-
-.footer-column.news {
-    color: blue;
-    max-width: 700px;
-}
-
-.footer-column.news form {
-    margin-top: 20px;
-}
-
-.footer-column.news input, .footer-column.news button {
-    appearance: none;
-    outline: none;
-    line-height: 50px;
-}
-
-.footer-column.news input {
-    display: block;
-    width: 100%;
-    border: 1px solid gray;
-    padding: 0 16px;
-}
-
-.footer-column.news button {
-    display: inline-block;
-    background: black;
-    border: 1px solid gray;
-    color: white;
-    padding: 0 32px;
-    margin-top: 10px;
-    transition: 0.4s color, 0.4s background-color, 0.5s border-radius;
-}
-
-.footer-column.news button:hover {
-    background-color: gray;
-    color: black;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.footer-bottom {
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.footer-copyright {
-    color: #666;
-}
-
-.footer-cards {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.footer-cards li {
-    border: 1px solid #d3d3d3;
 }

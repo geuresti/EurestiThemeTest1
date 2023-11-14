@@ -5,19 +5,6 @@
 - add images to dropdown
 */
 
-:root {
-    --lavender: #dcdcff;
-    --periwinkle: #cdcdff;
-    --purple: #8686fe;
-    --black-olive: #43433e;
-    --light-gray: #d3d3d3;
-    --sea-salt: #f9fafd;
-}
-
-* {
-    font-family: Arial;
-}
-
 .header-wrapper {
     background-color: var(--sea-salt);
     padding: 15px 40px 2px 40px;
