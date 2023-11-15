@@ -35,7 +35,7 @@
 }
 
 .product-block:hover {
-    background-color: lightgray;
+    background-color: gray;
     cursor: pointer;
 }
 
@@ -52,7 +52,7 @@
 }
 
 .product-img {
-    width: 100%;
+    width: 90%;
     height: auto;
     max-width: 100%;
 }
@@ -65,8 +65,8 @@
 
     .product-block {
         display: block;
-        height: 550px;
-        width: 400px;
+        height: 500px;
+        width: 350px;
         margin: auto;
         margin-top: 30px;
     }

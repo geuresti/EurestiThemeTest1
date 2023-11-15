@@ -26,15 +26,30 @@
 
 .mid-header {
     display: grid;
-    grid-template-columns: 20% 60% 10% 10%;
+    grid-template-columns: 20% 50% 20%;
     align-items: center;
-    /*border: 1px dotted blue;*/
+    justify-content: space-between;
 }
 
-/* to visualize the columns */
-.mid-header div {
-    /*border: 1px dotted red;*/
+.header-icon-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
+
+.header-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.header-icon img {
+    width: 100%;
+}
+
+.header-icon img:hover {
+    cursor: pointer;
+}
+
 
 .logo-container {
     float: left;
@@ -46,7 +61,7 @@
 .logo-container img {
     width: 100%;
     height: auto;
-    border: 2px solid darkgray;
+    border: 2px solid lightgray;
     border-radius: 3px;
 }
 
@@ -55,12 +70,20 @@
 }
 
 .search-bar input {
-    padding: 5px;
-    border-radius: 10px;
+    box-sizing: border-box;
+    border-radius: 15px;
     background-color: var(--lavender);
     border: none;
 
     width: 100%;
+
+    padding: 10px;
+    height: 30px;
+    margin: auto;
+}
+
+.search-bar input:focus {
+    outline: none;
 }
 
 .account {
@@ -120,11 +143,57 @@
 
 .dropdown:hover .dropdown-content {display: block;}
 
-/* Smaller screens */
+/******* HAMBURGER MENU *******/
+.placeholder {
+    background-color: green;
+    opacity: 0.95;
+}
+
+.hamburger-menu {
+    height: 64px;
+    border: 1px solid orange;
+}
+
+.hamburger-menu input {
+    position: absolute;
+
+    height: 50px;
+    width: 50px;
+
+    opacity: 0;
+}
+
+.hm-items {
+    position: relative;
+    right: 500px;
+    height: 250px;
+    width: 200px;
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: pink;
+
+    transition: right 0.4s ease-in-out;
+}
+
+.hm-items li {
+    margin-bottom: 10px;
+}
+
+.hamburger-menu input[type="checkbox"]:checked ~ .hm-items {
+    right: 0px;
+}
+
+/******* SMALLER SCREENS *******/
 @media screen and (max-width: 900px) {
     .header-wrapper {
-        background-color: pink;
-        padding-bottom: 20px;
+        padding: 15px 20px 20px 20px;
+    }
+
+    .mid-header {
+        width: 100%;
     }
 
     .shipping-info {

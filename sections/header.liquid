@@ -13,11 +13,13 @@
         <div class="search-bar">
             <input type="text" placeholder="Search...">
         </div>
-        <div>
-            <div class="account"></div>
-        </div>
-        <div>
-            <div class="cart"></div>
+        <div class="header-icon-wrapper">
+            <div class="header-icon">
+                <img src="{{ 'account-icon.png' | asset_url }}" alt="account icon" />
+            </div>
+            <div class="header-icon">
+                <img src="{{ 'cart-icon.png' | asset_url }}" alt="shopping cart icon" />
+            </div>
         </div>
     </div>
     <div class="nav-bar">
@@ -32,7 +34,25 @@
             </div>
         </a>
     </div>
+
+    <div class="placeholder">
+        <div class="hamburger-menu">
+            <input type="checkbox" name="">
+            <div class="hamburger-menu-icon">
+                <img src="{{ 'menu-select.PNG' | asset_url }}" alt="hamburger menu icon" />
+            </div>
+            <ul class="hm-items">
+                <li><a>New Arrivals</a></li>
+                <li><a>Men</a></li>
+                <li><a>Women</a></li>
+                <li><a>Buy More & Save</a></li>
+                <li><a>Shop All</a><li>
+            </ul>
+        </div>
+    </div>
+
 </div>
+
 
 {% schema %}
     {
