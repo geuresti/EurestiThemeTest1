@@ -1,15 +1,8 @@
 TO DO:
 - home page
     - sections
-        product section:
-            - product block (title)
-                - product (image, review, price)
-            - image block
         image section:
             - one big image, two small (*)
-        link section *:
-            - link block (image, title, link)
-            - image block (icon, link)
     - reviews
         - sortable
 
@@ -18,14 +11,10 @@ TO DO:
 - cart
 
 TO DO:
-    - Footer
-        - change color palette
-        - change content
-        - make responsive
-        - make better nav menus (quick links, ...)
     - Header
         - finish dropdown
         - add relevant links (from navigtaion menu)
+            - top / h menu should be customizable
         - make responsive
         - add functionality to search bar
         - Add logo

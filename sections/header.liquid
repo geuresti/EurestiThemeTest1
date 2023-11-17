@@ -5,11 +5,27 @@
         <p>Free standard shipping for orders over $100</p>
     </div>
     <div class="mid-header">
+
+        <div class="hamburger-menu">
+            <input type="checkbox" id="hm-checkbox">
+            <div class="hamburger-menu-icon">
+                <img src="{{ 'menu-select.PNG' | asset_url }}" alt="hamburger menu icon" />
+            </div>
+            <ul class="hm-items">
+                <li><a>New Arrivals</a></li>
+                <li><a>Men</a></li>
+                <li><a>Women</a></li>
+                <li><a>Buy More & Save</a></li>
+                <li><a>Shop All</a></li>
+            </ul>
+        </div>
+
         <div>
             <div class="logo-container">
                 <img src="{{ 'ag_logo.PNG' | asset_url }}" alt="apparel garden logo"/>
             </div>
         </div>
+
         <div class="search-bar">
             <input type="text" placeholder="Search...">
         </div>
@@ -28,28 +44,16 @@
         <a href="">Women</a>
         <a href="">Buy More & Save</a>
         <a href="">Blog</a>
+        <a href="">Shop All</a>
+        <!--
         <a class="dropdown"> Shop All
             <div class="dropdown-content">
                 <img src="" alt="picture"/>
             </div>
         </a>
+        -->
     </div>
-
-    <div class="placeholder">
-        <div class="hamburger-menu">
-            <input type="checkbox" name="">
-            <div class="hamburger-menu-icon">
-                <img src="{{ 'menu-select.PNG' | asset_url }}" alt="hamburger menu icon" />
-            </div>
-            <ul class="hm-items">
-                <li><a>New Arrivals</a></li>
-                <li><a>Men</a></li>
-                <li><a>Women</a></li>
-                <li><a>Buy More & Save</a></li>
-                <li><a>Shop All</a><li>
-            </ul>
-        </div>
-    </div>
+    
 
 </div>
 

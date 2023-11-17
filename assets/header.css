@@ -11,7 +11,7 @@
     box-shadow: 0 5px 10px var(--light-gray);
 
     width: 100%;
-    /*position: sticky;*/
+    min-width: 500px;
     position: fixed;
     top: 0;
 }
@@ -113,7 +113,6 @@
     color: var(--black-olive);
     text-decoration: none;
     box-sizing: content-box;
-    /*border: 1px solid green;*/
     padding-bottom: 3px;
     text-align: center;
     transition: 0.1s border-bottom, 0.1s padding-bottom;
@@ -144,14 +143,12 @@
 .dropdown:hover .dropdown-content {display: block;}
 
 /******* HAMBURGER MENU *******/
-.placeholder {
-    background-color: green;
-    opacity: 0.95;
-}
 
 .hamburger-menu {
-    height: 64px;
-    border: 1px solid orange;
+    height: 40px;
+    width: 40px;
+
+    display: none;
 }
 
 .hamburger-menu input {
@@ -161,39 +158,91 @@
     width: 50px;
 
     opacity: 0;
+    z-index: 1;
+}
+
+.hamburger-menu input:hover {
+    cursor: pointer;
 }
 
 .hm-items {
+    background-color: var(--sea-salt);
     position: relative;
-    right: 500px;
-    height: 250px;
-    width: 200px;
-    padding: 30px 20px;
+    right: 400px;
+    top: 15px;
+    height: 95vh;
+    width: 300px;
+    padding-top: 20px;
 
     display: flex;
     flex-direction: column;
 
-    background-color: pink;
-
     transition: right 0.4s ease-in-out;
+    z-index: -1;
+}
+
+.hm-items:hover {
+    cursor: pointer;
 }
 
 .hm-items li {
-    margin-bottom: 10px;
+    line-height: 1.5;
+    
+    height: 60px;
+    width: 100%;
+    font-size: 20px;;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 500;
+    margin-bottom: 20px;
+
+    border-bottom: 2px solid var(--black-olive);
+    border-top: 2px solid var(--black-olive);
 }
 
-.hamburger-menu input[type="checkbox"]:checked ~ .hm-items {
-    right: 0px;
+.hm-items li:hover {
+    background-color: var(--purple);
+    color: white;
 }
+
+.hamburger-menu-icon {
+    width: 50px;
+    height: 50px;
+
+    transition: rotate 1s;
+}
+
+.hamburger-menu-icon img {
+    width: 100%;
+}
+
+#hm-checkbox:checked ~ .hm-items {
+    right: 20px;
+}
+
+#hm-checkbox:checked ~ .hamburger-menu-icon {
+    rotate: 180deg;
+}
+
 
 /******* SMALLER SCREENS *******/
 @media screen and (max-width: 900px) {
     .header-wrapper {
-        padding: 15px 20px 20px 20px;
+        padding: 15px 20px 20px 10px;
     }
 
     .mid-header {
         width: 100%;
+
+        grid-template-columns: 10% 10% 50% 20%;
+    }
+
+    .logo-container {
+        width: 100%;
+        height: auto;
     }
 
     .shipping-info {
@@ -202,5 +251,9 @@
 
     .nav-bar {
         display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
     }
 }
