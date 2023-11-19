@@ -18,6 +18,7 @@
 
 .product-block-wrapper h2 {
     text-decoration: underline;
+    font-size: 25px;
 }
 
 .product-block {
@@ -65,9 +66,18 @@
 
     .product-block {
         display: block;
-        height: 500px;
+        height: 400px;
         width: 350px;
         margin: auto;
         margin-top: 30px;
+    }
+
+    .product-img {
+        width: 96%;
+        height: auto;
+    }
+
+    .product-block-wrapper h2 {
+        font-size: 20px;
     }
 }
