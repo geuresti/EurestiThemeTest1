@@ -1,16 +1,18 @@
 {{ 'text-image.css' | asset_url | stylesheet_tag }}
 
-{% if section.blocks %}
-    <div class="text-image-wrapper">
+<div class="text-image-wrapper" style="background-color:{{ section.settings.background-color }}">
+    {% if section.settings.layout %}
         <div class="text-image">
-            <img class="product-img" src="{{ section.settings.image | image_url }}" alt="Product image" />
             <p class="body-text"> {{ section.settings.text }}</p>
+            <img class="section-img" src="{{ section.settings.image | image_url }}" alt="image" />   
         </div>
-    </div>
-{% else %}
-    <p> Please add an image and some text </p>
-{% endif %}
-
+    {% else %}
+        <div class="text-image">
+            <img class="section-img" src="{{ section.settings.image | image_url }}" alt="image" />   
+            <p class="body-text"> {{ section.settings.text }} </p>
+        </div>
+    {% endif %}
+</div>
 
 {% schema %}
     {
@@ -25,13 +27,23 @@
                 "id": "image",
                 "label": "image",
                 "type": "image_picker"
+            },
+            {
+                "id": "background-color",
+                "label": "background color",
+                "type": "color"
+            },
+            {
+                "id": "layout",
+                "label": "flip image and text order",
+                "type": "checkbox"
             }
         ],
         "presets": [
             {
                 "name": "Text Image Block",
                 "settings": {
-                    "text": "My Text Image Block"
+                    "text": "body text"
                 },
                 "blocks": []
             }
