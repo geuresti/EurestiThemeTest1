@@ -1,11 +1,6 @@
-<!-- TO DO:
-- css
-- products should be links to their product pages
--->
-
 {{ 'product-block.css' | asset_url | stylesheet_tag }}
 
-<div class="product-block-wrapper">
+<div class="product-block-wrapper" style="background-color:{{ section.settings.background-color }}">
     <h2> {{ section.settings.title }} </h2>
 
     {% for block in section.blocks %}
@@ -28,13 +23,19 @@
 
 {% schema %}
     {
-        "name": "Product Block",
+        "name": "Product Section",
         "max_blocks": 3,
         "settings": [
             {
                 "id": "title",
                 "label": "title text",
                 "type": "text"
+            },
+            {
+                "type": "color",
+                "id": "background-color",
+                "label": "Background Color",
+                "default": "#f6f6f6"
             }
         ],
         "blocks": [

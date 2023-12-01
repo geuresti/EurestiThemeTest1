@@ -6,6 +6,8 @@ TO DO:
         (layout) and I'll have to figure out how to connect them 
         because right now it just resets to the default password 
         page when I try that set up.
+        
+        - Add a disclaimer about what this page is and isn't 
 
 NOTES:
 - ...

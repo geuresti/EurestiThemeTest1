@@ -1,0 +1,43 @@
+{{ 'text-image.css' | asset_url | stylesheet_tag }}
+
+{% if section.blocks %}
+    <div class="text-image-wrapper">
+        <div class="text-image">
+            <img class="product-img" src="{{ section.settings.image | image_url }}" alt="Product image" />
+            <p class="body-text"> {{ section.settings.text }}</p>
+        </div>
+    </div>
+{% else %}
+    <p> Please add an image and some text </p>
+{% endif %}
+
+
+{% schema %}
+    {
+        "name": "Text-Image Section",
+        "settings": [
+            {
+                "id": "text",
+                "label": "body text",
+                "type": "text"
+            },
+            {
+                "id": "image",
+                "label": "image",
+                "type": "image_picker"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Text Image Block",
+                "settings": {
+                    "text": "My Text Image Block"
+                },
+                "blocks": []
+            }
+        ],
+        "enabled_on": {
+            "templates": ["*"]
+        }
+    }
+{% endschema %}
